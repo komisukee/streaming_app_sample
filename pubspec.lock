@@ -18,10 +18,12 @@ packages:
   camera_with_rtmp:
     dependency: "direct main"
     description:
-      name: camera_with_rtmp
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.3.2"
+      path: "."
+      ref: master
+      resolved-ref: "6da20645134e9d0d2afbd4a44bd7bab8044d38d9"
+      url: "https://github.com/fastogt/flutter_rtmppublisher.git"
+    source: git
+    version: "0.3.3"
   characters:
     dependency: transitive
     description:
