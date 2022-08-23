@@ -291,15 +291,14 @@ class _CameraExampleHomeState extends State<CameraExampleHome>
     }
 
     // rtmpURLを指定を(自由に変更してください)
-    String rtmpUrl = 'rtmp://localhost:1935/live/test';
+    String rtmpUrl = 'rtmp://34.148.255.235:1935/live/test1';
     try {
       if (_timer != null) {
         _timer?.cancel();
         _timer = null;
       }
-      url = rtmpUrl;
-      await controller!.startVideoStreaming(url!);
-      _timer = Timer.periodic(Duration(seconds: 1), (timer) async {
+      await controller!.startVideoStreaming(rtmpUrl);
+      _timer = Timer.periodic(const Duration(seconds: 1), (timer) async {
         var stats = await controller!.getStreamStatistics();
         print(stats);
       });
